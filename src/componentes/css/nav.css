@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: flex;
+    justify-content: space-around;
+    padding:20px;
+}
+
+
+.nav-main{
+    display: flex;
+    background-color: rgb(122, 190, 253);
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.carrito{
+    width: 30px;
+    height: 30px;
+}
+
+
+
+
+.div-boton{
+    height: 150px;
+    width: 150px;
+}
+.boton{
+    width: 30px;
+    background-color: rgb(69, 200, 233);
+    height: 30px;
+    margin:10px;
+    font-size: 18px;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.cuadros{
+    background-color: rgb(139, 183, 235);
+    padding:30px;
+    margin:30px;
+    width: 300px;
+   
+   
+
+}
+
+h3{
+    font-size: 27px;
+    padding: 10px;
+
+}
+
+span, p {
+    font-size: 18px;
+    padding: 5px;
+}
+
+.imagenes{
+    width: 300px;
+    height: 350px;
+
+
+}

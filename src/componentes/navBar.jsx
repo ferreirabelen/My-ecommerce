@@ -7,8 +7,9 @@ function NavBar(){
     return(
         <nav>
             <ul className="nav-main">
-                <li><NavLink to = "/">Inicio</NavLink></li>
-                <li>Categoria</li>
+                <li className="nav"><NavLink to = "/">Inicio</NavLink></li>
+                <li> <NavLink to = "/category/cuadroGrande">Cuadros Grandes</NavLink></li>
+                <li> <NavLink to = "/category/cuadroChico">Cuadros Chicos</NavLink></li>
                 <li>Más sobre nosotros</li>
                 <CartWidget/>
             </ul>

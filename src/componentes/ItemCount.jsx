@@ -24,7 +24,7 @@ function ItemCount({stock,initial}){
 
     return(
         <div className="div-boton">
-            <button class="boton" onClick={Resta}>-</button>
+            <button className="boton" onClick={Resta}>-</button>
             <span>{cant}</span>
             <button className="boton" onClick={Suma}>+</button>
             <button>Agregar al carrito</button>

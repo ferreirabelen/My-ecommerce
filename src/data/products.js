@@ -2,7 +2,7 @@
 export const Productos = [
     {
         id: "1",
-        img : "./img/olas.png",
+        img : "./img/azul.jpg",
         nombre : "Cuadro de Olas",
         stock : 5,
         precio: "1980",
@@ -26,11 +26,11 @@ export const Productos = [
         descripcion : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas placeat odio voluptatibus. Aspernatur possimus, maiores amet incidunt architecto deletus!"
     },
     {
-        id: "3",
-        img : "../img/azul.jpg",
-        nombre : "Azul",
+        id: "4",
+        img : "../img/david.jpg",
+        nombre : "David",
         stock : 2,
         precio: "1980",
         descripcion : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas placeat odio voluptatibus. Aspernatur possimus, maiores amet incidunt architecto deletus!"
     }
-]
+];

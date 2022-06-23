@@ -12,7 +12,7 @@ const Item = ({item}) => {
             <p> El precio es de  <em> {item.precio}</em></p>
             <p> {item.descripcion} </p>
             <Link to = {urlDetalle}>
-                <button>Ver detalle del producto</button>
+                <button className="agregarCarrito">Ver detalle del producto</button>
             </Link>
             </div>
         </div>

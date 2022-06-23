@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+a{
+    text-decoration: none;
+}
+
 nav ul li {
     display: flex;
     justify-content: space-around;
@@ -73,9 +77,12 @@ img{
     justify-content:baseline;
     align-items: center;
     padding-left: 240px;
+    padding-bottom: 30px;
 
 }
-
+em{
+    padding-bottom: 20px;
+}
 .unicaimg{
     width: 600px;
     height: 600px;
@@ -87,11 +94,34 @@ img{
 .div-boton{
     height: 150px;
     width: 150px;
+    padding-top: 10px;
 }
 .boton{
     width: 30px;
-    background-color: rgb(69, 200, 233);
+    background-color: rgb(69, 233, 151);
     height: 30px;
-    margin:10px;
+    margin: 15px;
     font-size: 18px;
+
 }
+
+.agregarCarrito{
+    text-decoration: none;
+    font-size: 18px;
+    margin-top:15px;
+
+}
+
+.terminarCompra{
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    height: 300px;
+}
+
+
+
+
+
+
+

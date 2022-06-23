@@ -1,8 +1,16 @@
 
 import React from "react";
+import { useState } from "react";
 import ItemCount from "./ItemCount";
 
 export const ItemDetail = ({Item}) => {
+    const [desaparecerCount, setDesaparecerCount] = useState(false);
+
+
+    function handleOnAdd(){
+        console.log("tu vieja");
+        setDesaparecerCount(true);
+    }
     return (
         <div className = "unicoProducto">
             <img src={Item.img} alt={Item.nombre} className = "unicaimg" />
@@ -11,7 +19,13 @@ export const ItemDetail = ({Item}) => {
             <p > {Item.descripcion} </p>
             <em> El precio es de {Item.precio} </em>
             <div>   
-            <ItemCount stock={5} initial={1}/>
+
+            {
+                (desaparecerCount == false)
+                ?
+                <ItemCount onAdd = {handleOnAdd} stock={5} initial={1}/>
+                : <button><a href="/cart" className="terminarCompra" >terminar compra</a></button>
+            }
         </div>
         </div>
     )

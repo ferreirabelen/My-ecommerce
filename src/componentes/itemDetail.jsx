@@ -8,7 +8,7 @@ export const ItemDetail = ({Item}) => {
 
 
     function handleOnAdd(){
-        console.log("tu vieja");
+        console.log("probando");
         setDesaparecerCount(true);
     }
     return (
@@ -21,7 +21,7 @@ export const ItemDetail = ({Item}) => {
             <div>   
 
             {
-                (desaparecerCount == false)
+                (desaparecerCount === false)
                 ?
                 <ItemCount onAdd = {handleOnAdd} stock={5} initial={1}/>
                 : <button><a href="/cart" className="terminarCompra" >terminar compra</a></button>

@@ -120,6 +120,13 @@ em{
 }
 
 
+.vaciarCarrito, .borrarItemCarrito{
+    height: 30px;
+    font-size: 20px;
+    padding-right: 10px;
+    margin-left: 10px;
+}
+
 
 
 

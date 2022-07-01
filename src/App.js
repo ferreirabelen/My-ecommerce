@@ -4,6 +4,7 @@ import ItemListContainer from "./componentes/ItemListContainer";
 import ItemDetailContainer from "./componentes/itemDetailContainer";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {CartContextProvider} from "./componentes/CartContext";
+import CartReview from "./componentes/cartView"
 
 
 
@@ -24,6 +25,9 @@ function App() {
       
             <Route path="/category/:categoryId" element={
               <ItemListContainer saludo= " Categoria de Cuadros"/>}/>
+
+            <Route path="/cart" element={
+              <CartReview/>}/>
 
           </Routes>
 

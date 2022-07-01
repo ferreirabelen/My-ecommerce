@@ -13,6 +13,13 @@ export function CartContextProvider(props){
         }else{
             setCart([...cart ,{...Item, cantidad : cant} ]);
         }
+
+        
+}
+    function mostrar(Item,cant){
+        isInCart(Item.id)
+        console.log("hola")
+        return ([...cart ,{...Item, cantidad : cant} ]);
 }
 
     function isInCart (id){                                    //DEVUELVE T O F, EN CASO DE QUE SEA TRUE MANDAME UN CONSOLE DE QUE ESTA EN EL CARRITO SINO AGREGALO LINEA11 Y 12
@@ -31,9 +38,12 @@ export function CartContextProvider(props){
         
 
     }
+    
 
 
-    return <cartContext.Provider value = {{cart, addToCart, clear, removeItem}}>
+
+
+    return <cartContext.Provider value = {{cart , addToCart , clear , removeItem , mostrar}}>
         {props.children}
     </cartContext.Provider>
 }

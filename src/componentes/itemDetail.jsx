@@ -9,7 +9,7 @@ export const ItemDetail = ({Item}) => {
     const [desaparecerCount, setDesaparecerCount] = useState(false); //el profe la llamó setIsInCart(clase 9)
 
 
-    const { addToCart, cart, clear, removeItem} = useContext(cartContext);
+    const { addToCart, cart} = useContext(cartContext);
     console.log(addToCart,cart);
 
     
@@ -24,19 +24,16 @@ export const ItemDetail = ({Item}) => {
             <span> Hay {Item.stock} unidades de stock</span>
             <p > {Item.descripcion} </p>
             <em> El precio es de {Item.precio} </em>
-            <div>   
-
+    
             {
                 (desaparecerCount === false)
                 ?
                 <ItemCount onAdd = {handleOnAdd} stock={5} initial={1}/>
-                :  <><>
-                <button><Link to="/cart" className="terminarCompra">terminar compra  </Link></button>
-                <button onClick={() => clear()} className="vaciarCarrito">Vaciar carrito</button></>
-                <button onClick={() => removeItem(Item.id)}  className="borrarItemCarrito">Borrar el ultimo elemento agregado</button></>
+                :<Link to="/cart" >
+                <button className="terminarCompra" >terminar compra </button>
+                </Link>
 
             }
-        </div>
         </div>
     )
 }

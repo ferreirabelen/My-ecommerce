@@ -143,7 +143,38 @@ em{
     background-color: rgb(162, 233, 255);
 }
 
+.carritoAcumulado{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.otrocarrito{
+    width: 650px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content:baseline;
+    align-items: center;
+    padding-left: 240px;
+    padding-bottom: 30px;
+}
+
+.linkVolver{
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    left: 960px;
+    top: 50px;
+}
 
 
+.itemsCarrito{
+    position: absolute;
+    right:187px;
+    top:5px;
+    padding-top: 10px;
+    font-weight: 600;
+}
 
 

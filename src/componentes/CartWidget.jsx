@@ -1,15 +1,20 @@
-import React from "react";
-// import cartContext from "./CartContext";
+import React,{useContext} from "react";
+import cartContext from "./CartContext";
 import carrito from "./img/carrito.png";
 
 
 function CartWidget(){
-    // const {mostrar} = useContext(cartContext)
+    const {contarItems} = useContext(cartContext)
 
     return(
         <div>
             <img src={carrito} alt="carrito de compra" className="carrito"/>
-            {/* <p>{mostrar}</p> */}
+            {
+                contarItems() !== 0
+                ?  <p className="itemsCarrito">{contarItems()}</p>
+                : null
+            }
+
         </div>
     );
 }

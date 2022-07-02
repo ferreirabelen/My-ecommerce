@@ -38,7 +38,7 @@ function ItemDetailContainer(props){
             <h1>{props.saludo}</h1>
         <div> 
             {cargando
-                ?  <BeatLoader color={"blue"} size={14} margin={12} />
+                ?  <BeatLoader color={"rgb(122, 190, 253)"} size={14} margin={12} />
                 : <ItemDetail Item={unicoProducto} />
             }
             

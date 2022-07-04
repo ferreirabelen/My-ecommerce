@@ -1,41 +1,32 @@
 import React,{useState,useEffect} from "react";
 import "./css/nav.css";
 import ItemList from "./itemList";
-import {Productos} from "../data/products"
 import { useParams } from "react-router-dom";
-import {getItems} from "../firebase/firestore";
+import {getItems, traerPorCategoria} from "../firebase/firestore";
 
 
 
 function ItemListContainer(props){
 
-    getItems().then(respuesta => console.log( respuesta ) ) 
-
-
-
     const [productos, setProductos] = useState([]);
     const { categoryId } = useParams();
     const [cargando, setCargando] = useState(true)
 
+
     useEffect(()=>{
-                const traerProductos = new Promise((res,rej)=> {
-                setTimeout(() => {
-                    if(categoryId === undefined)
-                        res(Productos)
-                    else{
-                            const filterItem = Productos.filter( product => {
-                                return product.category === categoryId;
-                            })
-                            res(filterItem);
-                        }
-                    },1000);
-                });
-                
-                traerProductos
+        if(categoryId)
+            traerPorCategoria(categoryId)
                 .then((res) => {
                 setProductos(res)
                 setCargando(false)
                 });
+        else{
+            getItems()
+            .then((res) => {
+                setProductos(res)
+                setCargando(false)
+            })
+        }
             },[categoryId]);
     
             

@@ -18,8 +18,12 @@ export const ItemDetail = ({Item}) => {
         setDesaparecerCount(true);
     }
     return (
-        <div className = "unicoProducto">
+        <>
+        <div>
             <img src={Item.img} alt={Item.nombre} className = "unicaimg" />
+        </div>
+
+        <div className = "unicoProducto">
             <h3> {Item.nombre} </h3>
             <span> Hay {Item.stock} unidades de stock</span>
             <p > {Item.descripcion} </p>
@@ -35,5 +39,6 @@ export const ItemDetail = ({Item}) => {
 
             }
         </div>
+        </>
     )
 }

@@ -1,6 +1,6 @@
 
 import { initializeApp } from "firebase/app";
-import {getFirestore, getDocs, collection} from "firebase/firestore";
+import {getFirestore, getDocs, collection, getDoc, doc, query, where} from "firebase/firestore";
 
 
 const firebaseConfig = {
@@ -27,11 +27,47 @@ export async function getItems(){
 
     const productosSnapshot = await getDocs(coleccionProducto)
 
-    let respuesta = productosSnapshot.docs.map( doc => doc.data());
+    let respuesta = productosSnapshot.docs.map( doc => {
+        return{
+            ...doc.data(),
+            id: doc.id
+
+        }
+    }
+    );
 
     return respuesta;
 
 }
 
+export async function traerUnProducto(Itemid){
 
+    const docRef = doc(appFirestore,"productos", Itemid);
+
+    const docData = await getDoc(docRef);
+
+    return {id: docData.id, ...docData.data()};
+    }
+
+
+
+export async function traerPorCategoria(categoryId){
+
+    const coleccionProducto = collection(appFirestore, "productos");
+    const q = query(coleccionProducto, where("category", "==", categoryId));
+
+    const productosSnapshot = await getDocs(q);
+
+    let respuesta = productosSnapshot.docs.map( doc => {
+        return{
+            ...doc.data(),
+            id: doc.id
+
+        }
+    })
+
+    return respuesta;
+
+
+}
 export default appFirestore;

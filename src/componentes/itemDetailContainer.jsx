@@ -1,9 +1,9 @@
 import React,{useState,useEffect} from "react";
 import "./css/nav.css";
-import {Productos} from "../data/products";
 import {ItemDetail} from "./itemDetail";
 import { useParams } from "react-router-dom";
 import BeatLoader from "react-spinners/BeatLoader"
+import {traerUnProducto} from "../firebase/firestore";
 
 
 
@@ -16,21 +16,12 @@ function ItemDetailContainer(props){
 
 
     useEffect(()=>{
-                const traerProducto = new Promise((res,rej)=> {
-                setTimeout(() => {
-                    const encontrarItem = Productos.find( product => {
-                        return product.id == parseInt(itemId);
-                    })
-                    res(encontrarItem);
-                    },1000);
-                });
-                
-                traerProducto
+                traerUnProducto(itemId)
                 .then((res) => {
                 setunicoProducto(res)
                 setCargando(false)             //ya cargó la promesa, asi que cargando se vuelve false
                 });
-            },[]);
+            },[itemId]);
     
             
     return(

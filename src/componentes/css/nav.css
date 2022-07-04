@@ -38,16 +38,16 @@ h1{
 
 .cardsacomodadas{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     
 }
 
 .cuadros{
     /* background-color: rgb(139, 183, 235); */
-    padding:30px;
+    padding:20px;
     margin:30px;
-    width: 300px;
+    width: 310px;
     box-shadow: 1px 1px 10px rgb(141, 175, 226);
 }
 
@@ -65,7 +65,7 @@ span, p {
 }
 
 img{
-    width: 300px;
+    width: 310px;
     height: 350px;
 
 
@@ -75,12 +75,15 @@ img{
 .unicoProducto{
     width: 750px;
     padding: 10px;
-    display: flex;
-    flex-direction: column;
+    position: absolute;
+    left: 900px;
+    bottom: 400px;
+    /* display: flex;
+    /* flex-direction: column;
     justify-content:baseline;
     align-items: center;
     padding-left: 240px;
-    padding-bottom: 30px;
+    padding-bottom: 30px; */
 
 }
 em{
@@ -89,6 +92,7 @@ em{
 .unicaimg{
     width: 600px;
     height: 600px;
+    padding-left: 120px;
 }
 
 

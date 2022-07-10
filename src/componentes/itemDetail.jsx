@@ -34,7 +34,7 @@ export const ItemDetail = ({Item}) => {
                 ?
                 <ItemCount onAdd = {handleOnAdd} stock={5} initial={1}/>
                 :<Link to="/cart" >
-                <button className="terminarCompra" >terminar compra </button>
+                <button className="iralcarrito" >Ir al carrito</button>
                 </Link>
 
             }

@@ -1,6 +1,6 @@
 
 import { initializeApp } from "firebase/app";
-import {getFirestore, getDocs, collection, getDoc, doc, query, where} from "firebase/firestore";
+import {getFirestore, getDocs, collection, getDoc, doc, query, where, setDoc, addDoc} from "firebase/firestore";
 
 
 const firebaseConfig = {
@@ -51,6 +51,7 @@ export async function traerUnProducto(Itemid){
 
 
 
+    
 export async function traerPorCategoria(categoryId){
 
     const coleccionProducto = collection(appFirestore, "productos");
@@ -70,4 +71,17 @@ export async function traerPorCategoria(categoryId){
 
 
 }
+
+
+
+export async function createBuyOrder(dataOrder){
+    const orderColectionRef = collection(appFirestore,"ordenes");
+
+    const orderCreated = await addDoc(orderColectionRef, dataOrder);
+
+    return orderCreated
+}
+
+
+
 export default appFirestore;

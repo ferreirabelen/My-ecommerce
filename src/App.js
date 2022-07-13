@@ -5,6 +5,7 @@ import ItemDetailContainer from "./componentes/itemDetailContainer";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import cartContext, {CartContextProvider} from "./componentes/CartContext";
 import CartReview from "./componentes/cartView"
+import Final from "./componentes/Final";
 
 
 
@@ -28,6 +29,9 @@ function App() {
 
             <Route path="/cart" element={
               <CartReview/>}/>
+
+            <Route path="/finalizar" element={
+              <Final/>}/>
 
 
           </Routes>

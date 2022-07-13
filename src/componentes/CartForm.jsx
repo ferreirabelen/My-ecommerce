@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {Link} from "react";
 
     
 function CartForm( {cart,clear, totalPrice,createBuyOrder}) {
@@ -36,7 +37,7 @@ function CartForm( {cart,clear, totalPrice,createBuyOrder}) {
             console.log(orderCreated.id);
         } )
     }
-    
+
 
     return (
         <form className='formulario'>
@@ -51,9 +52,10 @@ function CartForm( {cart,clear, totalPrice,createBuyOrder}) {
         <label htmlFor="phone">Celular</label>
         <input onChange={handleChange} name="phone"></input>
         <hr />
-    <button onClick={handlebuyer} className="finalizar">Finalizar Compra!</button>
+        <button onClick={handlebuyer}  className="finalizar">Finalizar Compra!</button>
         </form>
     )
     }
 
 export default CartForm;
+

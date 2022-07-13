@@ -127,7 +127,7 @@ em{
 }
 
 
-.vaciarCarrito, .borrarItemCarrito{
+.vaciarCarrito{
     height: 30px;
     font-size: 20px;
     padding-right: 10px;
@@ -147,13 +147,6 @@ em{
     background-color: rgb(162, 233, 255);
 }
 
-.carritoAcumulado{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 650px;
-    padding: 10px;
-}
 
 
 .linkVolver{

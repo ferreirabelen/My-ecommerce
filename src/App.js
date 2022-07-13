@@ -3,7 +3,7 @@ import NavBar from "./componentes/navBar";
 import ItemListContainer from "./componentes/ItemListContainer";
 import ItemDetailContainer from "./componentes/itemDetailContainer";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import {CartContextProvider} from "./componentes/CartContext";
+import cartContext, {CartContextProvider} from "./componentes/CartContext";
 import CartReview from "./componentes/cartView"
 
 
@@ -28,6 +28,7 @@ function App() {
 
             <Route path="/cart" element={
               <CartReview/>}/>
+
 
           </Routes>
 

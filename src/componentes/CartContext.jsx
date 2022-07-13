@@ -48,12 +48,13 @@ export function CartContextProvider(props){
         return total;
     }
     
-    function totalPrice(){
+
+
+    function totalPrice() {
         let total = 0;
-        cart.forEach( (item ) => (total = item.precio * item.cantidad))
+        cart.forEach((item) => (total = total + item.precio * item.cantidad));
         return total;
     }
-
 
 
 

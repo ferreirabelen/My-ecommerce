@@ -74,12 +74,14 @@ export async function traerPorCategoria(categoryId){
 
 
 
+
+
 export async function createBuyOrder(dataOrder){
     const orderColectionRef = collection(appFirestore,"ordenes");
 
     const orderCreated = await addDoc(orderColectionRef, dataOrder);
 
-    return orderCreated
+    return orderCreated;
 }
 
 

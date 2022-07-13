@@ -1,27 +1,13 @@
 import React, {useContext}  from "react";
 import cartContext from "./CartContext";
-import {createBuyOrder} from "../firebase/firestore"
+import CartForm from "./CartForm";
+import { createBuyOrder } from "../firebase/firestore";
 
 
 function CartReview(){
     const {cart,clear, removeItem, totalPrice,contarItems} = useContext(cartContext);
 
-    function handlebuyer(){
-        const dataOrder = {
-            buyer :{
-                name: "react37",
-                phone: "1122233343",
-                email : "ferreirabelenn@gmail.com"
-            },
-            items : cart,
-            total : totalPrice()
-        }
-    createBuyOrder(dataOrder).then( (orderCreated) =>  {
-            clear();  //limpia el carrito dsp de finalizar la compra para que no se duplique lo elegido
-            console.log(orderCreated.id);
-        } )
-    }
-    
+
 
 
 
@@ -36,34 +22,39 @@ function CartReview(){
     else{
 
     }
-
     return (
-    cart.map(item => (
-        <div class="carritoAcumulado">
-            <h3> {item.nombre} </h3>
-            <p> {item.descripcion} </p>
-            <p>Cantidad de unidades: {contarItems()}</p>
-            <em> El precio de Unidad es de {item.precio} </em>
-
-            <div className="div">
-            <button onClick={() => removeItem(item.id)} className="borrarItemCarrito">Borrar el ultimo elemento agregado</button>
+    <>
+    <div>
+        {cart.map((item) => (
+        <div key={item.id}>
+            <div>
+                <h3>{item.nombre}</h3>
+                <p>$ {item.precio}</p>
+                <p>Cantidad de unidades: {contarItems()} </p>
+                <button onClick={() => removeItem(item.id)}>Borrar el elemento</button>
             </div>
-
-            <div  className="div">
-            <p>total: {totalPrice().toFixed(2)}{" "}</p>
-            </div>
-
-            <div  className="div">
-            <button onClick={ handlebuyer }>Finalizar Compra</button>
+        </div>
+        ))}
+    </div>
+    <div>
+        <div>
+        <p>
+            Total a pagar: ${totalPrice()}
             <button onClick={() => clear()} className="vaciarCarrito">Vaciar carrito</button>
 
-            </div>
-            
-        </div>
+            <CartForm cart={cart} totalPrice={totalPrice} clear={clear} createBuyOrder={createBuyOrder} />
         
-        ))
-    
-    )
-}
+            
+        </p>
+        </div>
 
-export default CartReview
+    </div>
+    </>
+)};
+
+
+
+
+export default CartReview;
+
+

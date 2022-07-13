@@ -39,17 +39,19 @@ function CartForm( {cart,clear, totalPrice,createBuyOrder}) {
     
 
     return (
-        <form>
+        <form className='formulario'>
         <label htmlFor="name">Usuario</label>
         <input onCahange={handleChange} name="name"></input>
+        
     
         <label htmlFor="email">Mail</label>
         <input onChange={handleChange} name="email"></input>
-    
+        
+
         <label htmlFor="phone">Celular</label>
         <input onChange={handleChange} name="phone"></input>
-    
-        <button onClick={handlebuyer}>Finalizar Compra!</button>
+        <hr />
+    <button onClick={handlebuyer} className="finalizar">Finalizar Compra!</button>
         </form>
     )
     }

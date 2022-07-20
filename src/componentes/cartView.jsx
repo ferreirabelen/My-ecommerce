@@ -37,15 +37,12 @@ function CartReview(){
         ))}
         <CartForm cart={cart} totalPrice={totalPrice} clear={clear} createBuyOrder={createBuyOrder} />
     </div>
+    
     <div>
         <div className="CART">
         <p>
             Total a pagar: ${totalPrice()}
             <button onClick={() => clear()} className="vaciarCarrito">Vaciar carrito</button>
-
-            
-        
-            
         </p>
         </div>
 

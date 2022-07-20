@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 a{
@@ -26,6 +27,7 @@ nav ul li {
 .carrito{
     width: 30px;
     height: 30px;
+    background-color: rgb(122, 190, 253);
 }
 
 
@@ -40,6 +42,7 @@ h1{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+   
     
 }
 
@@ -49,6 +52,7 @@ h1{
     margin:30px;
     width: 310px;
     box-shadow: 1px 1px 10px rgb(141, 175, 226);
+    background-color: white;
 }
 
 
@@ -78,12 +82,6 @@ img{
     position: absolute;
     left: 900px;
     bottom: 400px;
-    /* display: flex;
-    /* flex-direction: column;
-    justify-content:baseline;
-    align-items: center;
-    padding-left: 240px;
-    padding-bottom: 30px; */
 
 }
 em{
@@ -183,12 +181,10 @@ em{
 
 
 .formulario{
-    width: 300px;
+    width: 600px;
     font-size: 21px;
-    height: 300px;
     padding: 20px;
     background-color: rgb(72, 133, 224);
-    line-height:3;
 }
 
 label{

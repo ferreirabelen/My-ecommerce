@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
-import {Link} from "react";
+import React, {useState} from 'react';
+import InputForm from './InputForm';
 
     
 function CartForm( {cart,clear, totalPrice,createBuyOrder}) {
 
-    const [buyer, Setbuyer] = useState(
+    const [comprador, setComprador] = useState(
         {
             name:" ",
             email:" ",
@@ -13,49 +13,62 @@ function CartForm( {cart,clear, totalPrice,createBuyOrder}) {
         },
     );
 
+    const [mensaje, setMensaje] = useState(null)
+
+
     const handleChange = (evt) => {
-        const field = evt.target.name;
+        const input= evt.target.name;
         const value = evt.target.value;
-        Setbuyer({
-            ...buyer,
-            [field] : value,
+        setComprador({
+            ...comprador,
+            [input] : value,
         })}
 
 
 
     function handlebuyer(evt){
+        setMensaje("Su orden ha sido procesada con exito, revisa su casilla de mail para ver los detalles de su compra")
         evt.preventDefault();
         const dataOrder = {
-            buyer,
+            comprador,
             items : cart,
             total : totalPrice(),
         }
+
+    
     
     
         createBuyOrder(dataOrder).then( (orderCreated) =>  {
-            clear();  //limpia el carrito dsp de finalizar la compra para que no se duplique lo elegido
-            console.log(orderCreated.id);
+           clear() //limpia el carrito dsp de finalizar la compra para que no se duplique lo elegido
+            alert("Su orden de compra es :  " + orderCreated.id)
+
+        
+            
+            
         } )
     }
 
 
-    return (
-        <form className='formulario'>
-        <label htmlFor="name">Usuario</label>
-        <input onCahange={handleChange} name="name"></input>
+return (
+        <>
+        <div>
+            <h3>Ingresa tus Datos</h3>
+            <InputForm text="Nombre" type="name" onChange={handleChange}/>
+            <InputForm text="Mail" type="email" onChange={handleChange}/>
+            <InputForm text="Celular" type="phone" onChange={handleChange}/>
         
+        {
+            mensaje
+            ? <p>{mensaje}</p>
+            :  <button className="finalizar" onClick= {handlebuyer}>Finalizar Compra!  </button>
+        }
     
-        <label htmlFor="email">Mail</label>
-        <input onChange={handleChange} name="email"></input>
+        </div>
         
-
-        <label htmlFor="phone">Celular</label>
-        <input onChange={handleChange} name="phone"></input>
-        <hr />
-        <button onClick={handlebuyer}  className="finalizar">Finalizar Compra!</button>
-        </form>
+        </>
     )
-    }
+}
 
 export default CartForm;
 
+// 

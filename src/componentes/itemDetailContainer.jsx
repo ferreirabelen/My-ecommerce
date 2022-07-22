@@ -25,7 +25,7 @@ function ItemDetailContainer(props){
     
             
     return(
-        <div className="container">
+        <div>
             <h1>{props.saludo}</h1>
         <div> 
             {cargando

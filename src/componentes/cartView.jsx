@@ -31,15 +31,15 @@ function CartReview(){
                 <h3>{item.nombre}</h3>
                 <p>$ {item.precio}</p>
                 <p>Cantidad de unidades: {contarItems()} </p>
-                <button onClick={() => removeItem(item.id)}>Borrar el elemento</button>
+                <button onClick={() => removeItem(item.id)} className="BOTON">Borrar el elemento</button>
             </div>
         </div>
         ))}
         <CartForm cart={cart} totalPrice={totalPrice} clear={clear} createBuyOrder={createBuyOrder} />
     </div>
     
-    <div>
-        <div className="CART">
+    <div className="CART2">
+        <div >
         <p>
             Total a pagar: ${totalPrice()}
             <button onClick={() => clear()} className="vaciarCarrito">Vaciar carrito</button>

@@ -70,5 +70,41 @@ export const Productos = [
         stock : 2,
         precio: 1980,
         descripcion : "Lorem ipsum dolor sit amet con voluptatibus. Aspernatur possimus, maiores amet incidunt architecto deletus!"
+    },
+    {
+        id: "9",
+        category : "cuadroChico",
+        img : "../img/perrito.jpg",
+        nombre : "Dorado",
+        stock : 14,
+        precio: 1200,
+        descripcion : "Caudro pintado al lienzo"
+    },
+    {
+        id: "10",
+        category : "cuadroGrande",
+        img : "../img/fuego.jpg",
+        nombre : "Fuego",
+        stock : 2,
+        precio: 1700,
+        descripcion : "Lorem ipsum dolor sit amet con voluptatibus. Aspernatur possimus, maiores amet incidunt architecto deletus!"
+    },
+    {
+        id: "11",
+        category : "cuadroGrande",
+        img : "../img/gato2.jpg",
+        nombre : "Froid",
+        stock : 6,
+        precio: 1800,
+        descripcion : "Lorem ipsum dolor sit amet con voluptatibus. Aspernatur possimus, maiores amet incidunt architecto deletus!"
+    },
+    {
+        id: "12",
+        category : "cuadroGrande",
+        img : "../img/juntos.jpg",
+        nombre : "Cupído",
+        stock : 6,
+        precio: 1900,
+        descripcion : "Lorem ipsum dolor sit amet con voluptatibus. Aspernatur possimus, maiores amet incidunt architecto deletus!"
     }
 ];

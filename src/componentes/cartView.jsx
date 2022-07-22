@@ -31,7 +31,7 @@ function CartReview(){
             <div className="CART2">
                 <h3>{item.nombre}</h3>
                 <p>$ {item.precio}</p>
-                <p>Cantidad de unidades: {contarItems()} </p>
+                
                 <button onClick={() => removeItem(item.id)} className="BOTON">Borrar el elemento</button>
             </div>
         </div>
@@ -41,10 +41,9 @@ function CartReview(){
     
     <div className="CART2">
         <div >
-        <p>
-            Total a pagar: ${totalPrice()}
-            <button onClick={() => clear()} className="vaciarCarrito">Vaciar carrito</button>
-        </p>
+        <p>Total a pagar: ${totalPrice()}</p>
+        <p>Cantidad de unidades: {contarItems()} </p>
+        <button onClick={() => clear()} className="vaciarCarrito">Vaciar carrito</button>
         </div>
 
     </div>

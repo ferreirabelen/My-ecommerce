@@ -14,7 +14,8 @@ function CartReview(){
     if(cart.length === 0){
             return(
             <div>
-            <p class="vacio"> Ups! no hay nada en tu carrito aún vuelve a este link para poder cargar algo</p>
+            <p class="vacio"> Ups! No hay nada en tu carrito aún. 
+            Vuelve a este link para poder cargar algo</p>
             <a href="/" className= "linkVolver">Click acá!</a>
             </div>
             )

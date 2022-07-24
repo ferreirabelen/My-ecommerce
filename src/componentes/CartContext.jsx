@@ -25,7 +25,7 @@ export function CartContextProvider(props){
 }
 
 
-    function isInCart (id){                                    //DEVUELVE T O F, EN CASO DE QUE SEA TRUE MANDAME UN CONSOLE DE QUE ESTA EN EL CARRITO SINO AGREGALO LINEA11 Y 12
+    function isInCart (id){                                  
         return cart.some((prod) => prod.id === id)
 
     }

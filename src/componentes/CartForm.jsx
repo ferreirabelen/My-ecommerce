@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 
 export const CartForm = ({cart,clear, totalPrice,createBuyOrder}) => {
 
-    const { register, handleSubmit, formState: {errors} } = useForm();
+    const { register,handleSubmit, formState: {errors} } = useForm();
     
 
     const [comprador, setComprador] = useState({
@@ -86,3 +86,5 @@ export const CartForm = ({cart,clear, totalPrice,createBuyOrder}) => {
 }
 
 export default CartForm;
+
+

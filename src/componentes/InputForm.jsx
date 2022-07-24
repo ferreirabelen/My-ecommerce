@@ -13,5 +13,3 @@ function InputForm(props){
 }
 
 export default InputForm;
-
-//recibe props el text (nombre, telefono mail) y además el type que tambien es name, phone o email

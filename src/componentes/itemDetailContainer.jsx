@@ -10,7 +10,7 @@ import {traerUnProducto} from "../firebase/firestore";
 function ItemDetailContainer(props){
     const [unicoProducto, setunicoProducto] = useState([{}]);
 
-    const [cargando, setCargando] = useState(true);  //cuando la promesa no este lista se muestra un cargando .. y cuando se carga devuelve el producto
+    const [cargando, setCargando] = useState(true);
 
     const { itemId } = useParams();
 
@@ -19,7 +19,7 @@ function ItemDetailContainer(props){
                 traerUnProducto(itemId)
                 .then((res) => {
                 setunicoProducto(res)
-                setCargando(false)             //ya cargó la promesa, asi que cargando se vuelve false
+                setCargando(false)           
                 });
             },[itemId]);
     

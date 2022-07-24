@@ -10,7 +10,6 @@ const Item = ({item}) => {
             <h3> {item.nombre} </h3>
             <span> Hay {item.stock} unidades de stock</span>
             <p> El precio es de  <em> {item.precio}</em></p>
-            {/* <p> {item.descripcion} </p> */}
             <Link to = {urlDetalle}>
                 <button className="agregarCarrito">Ver detalle del producto</button>
             </Link>

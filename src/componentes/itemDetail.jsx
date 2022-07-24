@@ -6,7 +6,7 @@ import cartContext from "./CartContext";
 import { Link } from "react-router-dom";
 
 export const ItemDetail = ({Item}) => {
-    const [desaparecerCount, setDesaparecerCount] = useState(false); //el profe la llamó setIsInCart(clase 9)
+    const [desaparecerCount, setDesaparecerCount] = useState(false);
 
 
     const { addToCart, cart} = useContext(cartContext);

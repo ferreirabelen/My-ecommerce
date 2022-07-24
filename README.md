@@ -7,8 +7,8 @@ Este fue mi primer proyecto realizado con React con el fin de poder utilizar tod
 
 
 <h2>Sitio web</h2>
-<p>La app esta subida a Netlify</p>
-<a href ="https://curious-toffee-1c9157.netlify.app/">Link de la app</a>
+<p>La app Web diseñada esta subida a la plataforma de Netlify</p>
+<a href ="https://curious-toffee-1c9157.netlify.app/">Link directo a la app</a>
 
 
 
